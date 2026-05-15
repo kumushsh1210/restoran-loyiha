@@ -1,4 +1,3 @@
-asgiref
 Django
 pillow
 psycopg2-binary
