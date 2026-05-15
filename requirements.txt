@@ -1,4 +1,9 @@
-django
-dj-database-url
-psycopg2-binary
+asgiref==3.11.1
+Django==6.0.5
+pillow==12.2.0
+psycopg2-binary==2.9.12
+sqlparse==0.5.5
+tzdata==2026.2
 gunicorn
+python-dotenv
+dj-database-url==0.5.0
