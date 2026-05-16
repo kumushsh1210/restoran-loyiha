@@ -6,3 +6,5 @@ tzdata
 gunicorn
 python-dotenv
 dj-database-url==0.5.0
+whitenoise==6.6.0
+
