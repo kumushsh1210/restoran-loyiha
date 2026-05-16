@@ -1,0 +1,21 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 20px;
+}
+h1 {
+    color: #ff6b00 !important; /* Evos to'q sariq olov rang */
+    text-align: center;
+    font-weight: bold;
+}
+button, input[type="submit"], .btn, button[type="button"] {
+    background-color: #ff6b00 !important;
+    color: white !important;
+    border: none !important;
+    padding: 10px 24px !important;
+    border-radius: 25px !important;
+    font-weight: bold !important;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(255, 107, 0, 0.2);
+}
