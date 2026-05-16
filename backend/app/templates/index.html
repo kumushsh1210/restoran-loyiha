@@ -1,79 +1,176 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="uz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premium Restoran Menyusi</title>
-    <!-- Zamonaviy dizayn uchun Tailwind CSS ulash -->
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-gray-50 text-gray-800 font-sans pb-24">
 
-    <!-- Sahifa tepasi (Header) -->
-    <header class="bg-gradient-to-r from-amber-500 to-orange-600 text-white py-12 text-center shadow-md">
-        <h1 class="text-4xl font-extrabold tracking-wide">PREMIUM RESTORAN</h1>
-        <p class="text-lg mt-2 font-light text-amber-100">Onlayn buyurtma va to'lovlar tizimi</p>
+    <header class="bg-gradient-to-r from-orange-500 to-red-600 text-white text-center py-10 px-4 shadow-lg">
+        <h1 class="text-4xl font-extrabold tracking-tight md:text-5xl">PREMIUM RESTORAN</h1>
+        <p class="text-lg mt-2 font-light opacity-90">Onlayn buyurtma va to'lovlar tizimi</p>
     </header>
 
-    <!-- Asosiy qism -->
-    <main class="max-w-6xl mx-auto px-4 py-12">
-        <h2 class="text-2xl font-bold text-gray-900 mb-8 border-b-2 border-orange-500 pb-2 inline-block">Taomlar va Ichimliklar Menyusi</h2>
-
-        <!-- Taomlar kartochkalari tarmog'i -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-            <!-- 1-Taom -->
-            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-300">
-                <div class="p-6">
-                    <div class="flex justify-between items-start mb-3">
-                        <h3 class="text-xl font-bold text-gray-900">Premium Oshpaz Palovi</h3>
-                        <span class="bg-amber-100 text-amber-800 text-xs font-semibold px-2.5 py-0.5 rounded">Asosiy taom</span>
+    <section class="max-w-6xl mx-auto px-4 mt-8">
+        <div class="bg-gradient-to-r from-red-500 to-amber-500 rounded-2xl p-6 text-white shadow-xl">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-2xl font-bold flex items-center gap-2">
+                    ⚡ Kunlik Chegirmalar!
+                </h2>
+                <span class="bg-white text-red-600 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider animate-bounce">
+                    Faqat Bugun
+                </span>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-white/10 backdrop-blur-md rounded-xl p-4 flex justify-between items-center border border-white/20">
+                    <div>
+                        <h3 class="text-xl font-bold">Evos Lavash + Kola (0.5L)</h3>
+                        <p class="text-sm text-white/80 mt-1">Issiq qarsillaydigan lavash va muzdek kola kombosi.</p>
+                        <div class="flex items-center gap-3 mt-3">
+                            <span class="text-2xl font-black text-yellow-300">32 000 so'm</span>
+                            <span class="text-sm line-through text-white/60">42 000 so'm</span>
+                        </div>
                     </div>
-                    <p class="text-gray-500 text-sm mb-6">Eng sara guruch, yangi go'sht va maxsus ziravorlar bilan tayyorlangan milliy taom.</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-2xl font-black text-orange-600">45 000 <span class="text-xs font-normal text-gray-400">so'm</span></span>
-                        <button class="bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-4 rounded-xl text-sm transition-colors shadow-sm">Buyurtma berish</button>
+                    <button class="buyurtma-btn bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-extrabold px-5 py-3 rounded-xl transition duration-300 shadow-md transform active:scale-95">
+                        Buyurtma berish
+                    </button>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-md rounded-xl p-4 flex justify-between items-center border border-white/20">
+                    <div>
+                        <h3 class="text-xl font-bold">Oilaviy Kombo (Burger + Fri)</h3>
+                        <p class="text-sm text-white/80 mt-1">Katta oilaviy kechki ovqat uchun maxsus to'plam.</p>
+                        <div class="flex items-center gap-3 mt-3">
+                            <span class="text-2xl font-black text-yellow-300">55 000 so'm</span>
+                            <span class="text-sm line-through text-white/60">75 000 so'm</span>
+                        </div>
                     </div>
+                    <button class="buyurtma-btn bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-extrabold px-5 py-3 rounded-xl transition duration-300 shadow-md transform active:scale-95">
+                        Buyurtma berish
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-6xl mx-auto px-4 mt-10">
+        <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-orange-500 pb-2 mb-6 inline-block">Taomlar va Ichimliklar Menyusi</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <div class="bg-white rounded-2xl p-6 shadow-md border border-gray-100 flex flex-col justify-between hover:shadow-lg transition">
+                <div>
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-2xl font-bold text-gray-900">Premium Oshpaz Palovi</h3>
+                        <span class="bg-amber-100 text-amber-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Asosiy taom</span>
+                    </div>
+                    <p class="text-gray-600 mt-2">Eng sara guruch, yangi go'sht va maxsus ziravorlar bilan tayyorlangan milliy taom.</p>
+                </div>
+                <div class="flex justify-between items-center mt-6">
+                    <span class="text-3xl font-extrabold text-orange-600">45 000 <span class="text-sm font-medium text-gray-500">so'm</span></span>
+                    <button class="buyurtma-btn bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-2.5 rounded-full shadow transition transform active:scale-95">
+                        Buyurtma berish
+                    </button>
                 </div>
             </div>
 
-            <!-- 2-Taom -->
-            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-300">
-                <div class="p-6">
-                    <div class="flex justify-between items-start mb-3">
-                        <h3 class="text-xl font-bold text-gray-900">Mayda Mol Go'shtli Shashlik</h3>
-                        <span class="bg-amber-100 text-amber-800 text-xs font-semibold px-2.5 py-0.5 rounded">Kaboblar</span>
+            <div class="bg-white rounded-2xl p-6 shadow-md border border-gray-100 flex flex-col justify-between hover:shadow-lg transition">
+                <div>
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-2xl font-bold text-gray-900">Mayda Mol Go'shtli Shashlik</h3>
+                        <span class="bg-amber-100 text-amber-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Kaboblar</span>
                     </div>
-                    <p class="text-gray-500 text-sm mb-6">Ko'marda pishirilgan, yumshoq va juda mazali milliy shashlik.</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-2xl font-black text-orange-600">18 000 <span class="text-xs font-normal text-gray-400">so'm</span></span>
-                        <button class="bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-4 rounded-xl text-sm transition-colors shadow-sm">Buyurtma berish</button>
-                    </div>
+                    <p class="text-gray-600 mt-2">Qo'g'shmarda pishirilgan, yumshoq va juda mazali milliy shashlik.</p>
                 </div>
-            </div>
-
-            <!-- 3-Taom -->
-            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-300">
-                <div class="p-6">
-                    <div class="flex justify-between items-start mb-3">
-                        <h3 class="text-xl font-bold text-gray-900">Ko'k Choy (Limonli)</h3>
-                        <span class="bg-amber-100 text-amber-800 text-xs font-semibold px-2.5 py-0.5 rounded">Ichimliklar</span>
-                    </div>
-                    <p class="text-gray-500 text-sm mb-6">Yangi limon bo'laklari va shifobaxsh tog' giyohlari qo'shilgan ko'k choy.</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-2xl font-black text-orange-600">5 000 <span class="text-xs font-normal text-gray-400">so'm</span></span>
-                        <button class="bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-4 rounded-xl text-sm transition-colors shadow-sm">Buyurtma berish</button>
-                    </div>
+                <div class="flex justify-between items-center mt-6">
+                    <span class="text-3xl font-extrabold text-orange-600">18 000 <span class="text-sm font-medium text-gray-500">so'm</span></span>
+                    <button class="buyurtma-btn bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-2.5 rounded-full shadow transition transform active:scale-95">
+                        Buyurtma berish
+                    </button>
                 </div>
             </div>
 
         </div>
     </main>
 
-    <!-- Sahifa pastki qismi -->
-    <footer class="bg-gray-900 text-gray-400 py-6 text-center text-sm border-t border-gray-800 mt-24">
-        <p>&copy; 2026 Restoran Boshqaruv Tizimi. Kurs ishi uchun maxsus tayyorlandi.</p>
-    </footer>
+    <div id="savat-panel" class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-2xl p-4 transform translate-y-full transition-transform duration-300 z-50">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <div>
+                <p class="text-sm text-gray-500 font-medium">Savatdagi taomlar soni: <span id="savat-soni" class="font-bold text-gray-800">0</span> ta</p>
+                <p class="text-2xl font-black text-gray-950">Jami: <span id="savat-jami" class="text-orange-600">0</span> so'm</p>
+            </div>
+            <button onclick="hisobniTozalash()" class="bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold px-4 py-3 rounded-xl mr-2 text-sm">
+                Tozalash
+            </button>
+            <button onclick="buyurtmaniYakunlash()" class="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-bold px-6 py-3 rounded-xl shadow-md text-sm md:text-base">
+                Hisoblash va Rasmiylashtirish
+            </button>
+        </div>
+    </div>
 
+    <script>
+        let jamiSumma = 0;
+        let taomlarSoni = 0;
+
+        const savatPanel = document.getElementById('savat-panel');
+        const savatSoniElement = document.getElementById('savat-soni');
+        const savatJamiElement = document.getElementById('savat-jami');
+
+        // Barcha "Buyurtma berish" tugmalariga bosish hodisasini ulaymiz
+        document.querySelectorAll('.buyurtma-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Tugma joylashgan kartochkani topamiz
+                const card = this.closest('div.bg-white, div.backdrop-blur-md');
+                
+                // Taom nomini aniqlaymiz
+                const titleTag = card.querySelector('h3');
+                const taomNomi = titleTag ? titleTag.innerText.trim() : "Taom";
+                
+                // Kartochka ichidagi matndan narxni qidiramiz
+                const cardText = card.innerText;
+                const narxMatch = cardText.match(/(\d[\d\s]*)\s*so['`’]m/i);
+                
+                if (narxMatch) {
+                    // Bo'shliqlarni olib tashlab, raqamga aylantiramiz
+                    const narx = parseInt(narxMatch[1].replace(/\s/g, ''));
+                    
+                    // Hisobni yangilaymiz
+                    jamiSumma += narx;
+                    taomlarSoni += 1;
+                    
+                    // Savat panelini yangilash
+                    savatSoniElement.innerText = taomlarSoni;
+                    savatJamiElement.innerText = jamiSumma.toLocaleString();
+                    
+                    // Savat panelini pastdan chiqarish (ko'rsatish)
+                    savatPanel.classList.remove('translate-y-full');
+                    
+                    // Chiroyli kichik bildirishnoma (alert)
+                    alert(`✅ ${taomNomi} savatga qo'shildi!`);
+                }
+            });
+        });
+
+        // Savatni nolga tushirish funksiyasi
+        function hisobniTozalash() {
+            jamiSumma = 0;
+            taomlarSoni = 0;
+            savatSoniElement.innerText = '0';
+            savatJamiElement.innerText = '0';
+            savatPanel.classList.add('translate-y-full');
+            alert("Savat tozalandi!");
+        }
+
+        // Yakuniy hisob-kitob tugmasi bosilganda
+        function buyurtmaniYakunlash() {
+            alert(`🎉 Buyurtmangiz qabul qilindi!\n\n🛍️ Jami taomlar: ${taomlarSoni} ta\n💵 To'lov qilinishi kerak bo'lgan summa: ${jamiSumma.toLocaleString()} so'm\n\nYoqimli ishtaha! 😋`);
+            hisobniTozalash();
+        }
+    </script>
 </body>
-</html>
+    </html>
+    
